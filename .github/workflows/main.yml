@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - run: rm -rf node_modules
       - run: npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
